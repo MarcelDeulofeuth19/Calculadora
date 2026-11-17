@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1E1E2E"
+    android:fitsSystemWindows="true"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculadora UMB"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etNumero1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Primer número"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAAAAA" />
+
+    <EditText
+        android:id="@+id/etNumero2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Segundo número"
+        android:inputType="numberDecimal|numberSigned"
+        android:imeOptions="actionDone"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAAAAA" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:stretchColumns="*">
+
+        <TableRow>
+            <Button android:id="@+id/btnSumar" android:text="+" android:textSize="22sp" android:layout_margin="4dp" />
+            <Button android:id="@+id/btnRestar" android:text="−" android:textSize="22sp" android:layout_margin="4dp" />
+        </TableRow>
+
+        <TableRow>
+            <Button android:id="@+id/btnMultiplicar" android:text="×" android:textSize="22sp" android:layout_margin="4dp" />
+            <Button android:id="@+id/btnDividir" android:text="÷" android:textSize="22sp" android:layout_margin="4dp" />
+        </TableRow>
+
+        <TableRow>
+            <Button android:id="@+id/btnLimpiar" android:text="Limpiar" android:layout_margin="4dp" />
+            <Button android:id="@+id/btnSalir" android:text="Salir" android:backgroundTint="#C0392B" android:layout_margin="4dp" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado: "
+        android:textColor="#2ECC71"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/tvHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Historial:\n"
+            android:textColor="#CCCCCC"
+            android:textSize="16sp" />
+    </ScrollView>
+</LinearLayout>
